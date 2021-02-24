@@ -1,6 +1,6 @@
 package Lesson1;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         variables();
         task3(2, 5, 7, 3);
@@ -23,14 +23,14 @@ public class main {
     }
 
     private static float task3(int a, int b, float c, int d) {
-        return (a * (b + (c / d)));
+        return a * (b + (c / d));
     }
 
     private static boolean task4(int a, int b){
         if (a + b >= 10 & a + b <= 20) {
-            return (true);
+            return true;
         } else {
-            return (false);
+            return false;
         }
     }
 
@@ -44,9 +44,9 @@ public class main {
 
     private static boolean task6(int i) {
         if (i < 0) {
-            return (true);
+            return true;
         } else {
-            return (false);
+            return false;
         }
     }
 
