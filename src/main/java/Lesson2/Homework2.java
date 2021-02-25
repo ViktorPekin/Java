@@ -11,6 +11,8 @@ public class Homework2 {
         task5();
         int[] arr6 = {1, 1, 1, 1, 1, 1, 10, 0};
         System.out.println(task6(arr6));
+        int[] arr7 = {1, 2, 3, 4, 5};
+        task7(arr7, 1);
     }
 
     private static void task1() {
@@ -93,4 +95,28 @@ public class Homework2 {
         }
         return result;
     }
+
+    private static void task7(int[] arr7, int n) {
+        int a = 0;
+        if (n > 0) {
+            for (int i = 0; i < n; i++) {
+                a = arr7[0];
+                arr7[0] = arr7[arr7.length - 1];
+                for (int j = 1; j < arr7.length - 1; j++) {
+                    arr7[arr7.length - j] = arr7[arr7.length - j - 1];
+                }
+                arr7[1] = a;
+            }
+        } else {
+            for (int i = 0; i > n; i--) {
+                a = arr7[arr7.length - 1];
+                arr7[arr7.length - 1] = arr7[0];
+                for (int j = 1; j < arr7.length - 1; j++) {
+                    arr7[j - 1] = arr7[j];
+                }
+                arr7[arr7.length - 2] = a;
+            }
+        }
+            System.out.println(Arrays.toString(arr7));
+        }
 }
