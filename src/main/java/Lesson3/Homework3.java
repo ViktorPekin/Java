@@ -51,30 +51,27 @@ public class Homework3 {
         int randomWordNumber = (int)(Math.random() * words.length);
         Scanner scanner = new Scanner(System.in);
         char[] compare = new char[15];
+        String randomWord = words[randomWordNumber];
 
-        for (int i = 0; i < words.length; i++) {
-            String randomWord = words[randomWordNumber];
+        for ( ; ; ) {
             String word = scanner.next();
-            System.out.println(randomWord.length() + randomWord);
-            if (randomWord == word) {
+            if (randomWord.equals(word)) {
                 System.out.println("Красава!");
                 return;
             } else {
-                int most = randomWord.length() <= word.length() ? word.length() : randomWord.length();
-                for (int j = 0; j < most; j++) {
-
-                    if (randomWord.charAt(j) == word.charAt(j)) {
-                        compare[j] = randomWord.charAt(j);
+                for (int j = 0; j < compare.length; j++) {
+                    if (randomWord.length() <= j || word.length() <= j) {
+                        compare[j] = '#';
                     } else {
-                        compare[j] = '*';
+                        if (randomWord.charAt(j) != word.charAt(j)) {
+                            compare[j] = '#';
+                        } else {
+                            compare[j] = randomWord.charAt(j);
+                        }
                     }
-
                 }
             }
             System.out.println(Arrays.toString(compare));
-
-
         }
-
     }
 }
