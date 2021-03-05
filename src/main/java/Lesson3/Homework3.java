@@ -1,7 +1,7 @@
 package Lesson3;
 
 import java.util.Arrays;
-import java.util.Random;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Homework3 {
@@ -12,8 +12,8 @@ public class Homework3 {
 
     private static void task1() {
         Scanner scanner = new Scanner(System.in);
-        for ( ; ; ) {
-            int randomNumber = (int)(Math.random() * 10);
+        for (; ; ) {
+            int randomNumber = (int) (Math.random() * 10);
             System.out.println("Введите число от 0 до 9");
             for (int j = 0; j < 3; j++) {
                 int number = scanner.nextInt();
@@ -48,12 +48,12 @@ public class Homework3 {
 
     private static void task2() {
         String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
-        int randomWordNumber = (int)(Math.random() * words.length);
+        int randomWordNumber = (int) (Math.random() * words.length);
         Scanner scanner = new Scanner(System.in);
         char[] compare = new char[15];
         String randomWord = words[randomWordNumber];
 
-        for ( ; ; ) {
+        for (; ; ) {
             String word = scanner.next();
             if (randomWord.equals(word)) {
                 System.out.println("Красава!");
