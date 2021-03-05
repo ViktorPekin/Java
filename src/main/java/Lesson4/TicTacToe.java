@@ -204,11 +204,7 @@ public class TicTacToe {
             if (sizeWin == WINNER) {
                 return true;
             } else {
-                if (MAP[i][column] == symbol) {
-                    sizeWin++;
-                } else {
-                    sizeWin = 0;
-                }
+                sizeWin = (MAP[i][column] == symbol) ?  sizeWin + 1 : 0;
             }
         }
         return sizeWin == WINNER;
@@ -220,11 +216,7 @@ public class TicTacToe {
             if (sizeWin == WINNER) {
                 return true;
             } else {
-                if (MAP[row][i] == symbol) {
-                    sizeWin++;
-                } else {
-                    sizeWin = 0;
-                }
+                sizeWin = (MAP[row][i] == symbol) ?  sizeWin + 1 : 0;
             }
         }
         return sizeWin == WINNER;
@@ -238,19 +230,11 @@ public class TicTacToe {
             } else {
                 if (column > row) {
                     if (i < SIZE - (column - row)) {
-                        if (MAP[i][i + (column - row)] == symbol) {
-                            sizeWin++;
-                        } else {
-                            sizeWin = 0;
-                        }
+                        sizeWin = (MAP[i][i + (column - row)] == symbol) ?  sizeWin + 1 : 0;
                     }
                 } else {
                     if (i < SIZE - (row - column)) {
-                        if (MAP[i + (row - column)][i] == symbol) {
-                            sizeWin++;
-                        } else {
-                            sizeWin = 0;
-                        }
+                        sizeWin = (MAP[i + (row - column)][i] == symbol) ?  sizeWin + 1 : 0;
                     }
                 }
             }
@@ -266,19 +250,11 @@ public class TicTacToe {
             } else {
                 if (SIZE <= (row + column + 1)) {
                     if (i < SIZE - Math.abs(SIZE - (row + column + 1))) {
-                        if (MAP[i + Math.abs(SIZE - (row + column + 1))][SIZE - 1 - i] == symbol) {
-                            sizeWin++;
-                        } else {
-                            sizeWin = 0;
-                        }
+                        sizeWin = (MAP[i + Math.abs(SIZE - (row + column + 1))][SIZE - 1 - i] == symbol) ?  sizeWin + 1 : 0;
                     }
                 } else if (SIZE > (row + column + 1)) {
                     if (i < SIZE - Math.abs(SIZE - (row + column + 1))) {
-                        if (MAP[i][SIZE - 1 - i - (SIZE - (row + column + 1))] == symbol) {
-                            sizeWin++;
-                        } else {
-                            sizeWin = 0;
-                        }
+                        sizeWin = (MAP[i][SIZE - 1 - i - (SIZE - (row + column + 1))] == symbol) ?  sizeWin + 1 : 0;
                     }
                 }
             }
