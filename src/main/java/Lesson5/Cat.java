@@ -4,8 +4,8 @@ import java.util.Locale;
 
 public class Cat {
 
-    protected String name;
-    protected String color;
+    private String name;
+    private String color;
     private int age;
     private static int catsCount;
 
