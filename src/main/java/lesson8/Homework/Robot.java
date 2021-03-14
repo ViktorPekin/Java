@@ -1,6 +1,6 @@
 package lesson8.Homework;
 
-public class Robot implements Run, Jump{
+public class Robot implements Player{
     private String name;
     private int speedRun;
     private int heightJump;
@@ -34,9 +34,12 @@ public class Robot implements Run, Jump{
     public void setHeightJump(int heightJump) {
         this.heightJump = heightJump;
     }
-    @Override
-    public void jump() {
 
+    @Override
+    public void jump(int h) {
+        if (h < heightJump) {
+            System.out.println("robot j");
+        }
     }
 
     @Override

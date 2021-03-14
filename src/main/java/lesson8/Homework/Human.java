@@ -1,6 +1,6 @@
 package lesson8.Homework;
 
-public class Human implements Run, Jump{
+public class Human implements Player{
     private String name;
     private int speedRun;
     private int heightJump;
@@ -36,7 +36,7 @@ public class Human implements Run, Jump{
     }
 
     @Override
-    public void jump() {
+    public void jump(int h) {
 
     }
 

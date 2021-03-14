@@ -1,6 +1,6 @@
 package lesson8.Homework;
 
-public class Cat implements Run, Jump{
+public class Cat implements Player {
     private String name;
     private int speedRun;
     private int heightJump;
@@ -37,7 +37,7 @@ public class Cat implements Run, Jump{
 
 
     @Override
-    public void jump() {
+    public void jump(int h) {
 
     }
 
