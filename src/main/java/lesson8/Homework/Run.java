@@ -1,5 +1,5 @@
 package lesson8.Homework;
 
 public interface Run {
-    void flee();
+    void flee(int b);
 }

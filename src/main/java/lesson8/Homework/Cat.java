@@ -38,11 +38,19 @@ public class Cat implements Player {
 
     @Override
     public void jump(int h) {
-
+        if (h < heightJump) {
+            System.out.println(name + " перепрыгнул");
+        } else {
+            System.out.println(name + " не перепрыгнул");
+        }
     }
 
     @Override
-    public void flee() {
-
+    public void flee(int b) {
+        if (b < speedRun) {
+            System.out.println(name + " пробежал");
+        } else {
+            System.out.println(name + " не пробежал");
+        }
     }
 }
