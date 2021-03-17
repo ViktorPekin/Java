@@ -36,20 +36,24 @@ public class Robot implements Player{
     }
 
     @Override
-    public void jump(int h) {
+    public boolean jump(int h) {
         if (h < heightJump) {
             System.out.println(name + " перепрыгнул");
+            return true;
         } else {
             System.out.println(name + " не перепрыгнул");
+            return false;
         }
     }
 
     @Override
-    public void flee(int b) {
+    public boolean flee(int b) {
         if (b < speedRun) {
             System.out.println(name + " пробежал");
+            return true;
         } else {
             System.out.println(name + " не пробежал");
+            return false;
         }
     }
 }

@@ -1,6 +1,6 @@
 package lesson8.Homework;
 
 public interface Player{
-    void jump(int h);
-    void flee(int b);
+    boolean jump(int h);
+    boolean flee(int b);
 }
