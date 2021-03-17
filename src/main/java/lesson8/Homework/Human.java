@@ -11,30 +11,6 @@ public class Human implements Player{
         this.heightJump = heightJump;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getSpeedRun() {
-        return speedRun;
-    }
-
-    public int getHeightJump() {
-        return heightJump;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSpeedRun(int speedRun) {
-        this.speedRun = speedRun;
-    }
-
-    public void setHeightJump(int heightJump) {
-        this.heightJump = heightJump;
-    }
-
     @Override
     public boolean jump(int h) {
         if (h < heightJump) {
